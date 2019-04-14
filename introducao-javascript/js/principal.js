@@ -22,17 +22,17 @@ for (var i = 0; i < pacientes.length; i++){ //length é a propriedade que ja tem
      var alturaEValida = true;
      
      if (peso < 0 || peso > 1000){
-         console.log("Peso Inválido!);
+         console.log("Peso Inválido!");
          pesoEValido = false;
      }
          if (altura < 0 || altura > 3.00){
              console.log("Peso Inválido!");
              alturaEValida = false;
          }
-             //if (alturaEValida && pesoEValido) {
-                 //var imc = peso / (altura * altura);
-                 //tdImc.textContent = imc.toFixed(2);    
-             //} 
+             if (alturaEValida && pesoEValido) {
+                 var imc = peso / (altura * altura);
+                 tdImc.textContent = imc.toFixed(2);    
+             } 
         
 }
 
