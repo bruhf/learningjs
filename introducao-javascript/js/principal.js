@@ -2,8 +2,9 @@ console.log("Fui carregado de um arquivo externo.");
 var titulo = document.querySelector(".titulo"); //Função querySelector permite buscar pequenas partes do documento para alterar, não é muito bom procurar por tag ex "h1", mas sim por classes, ID ou por seletor CSS, no caso a .titulo pq o meu "h1" transformei em uma classe. //document (DOM, document JS) se trata do "arquivo" mestre do navegador e dentro dele está tudo referente ao HTML da página toda do site. Ele repesenta todo conteúdo da página. E ele que será  ponte entre o HTML e o JS.
 titulo.textContent = "Aparecida Nutricionista"; //texcontent pega o texto da tag que a gente quer alterar e nela podemos manipular as palavras.
 
-var pacientes = document.querySelectorAll(".paciente"); //criei uma variavel paciente que vai ter a função de dentro do meu document procurar a ID do primeiro paciente. Pra procurar ID usa #, classes é .
-var tdPeso = paciente.querySelector(".info-peso"); // criei a variavel tdPeso pra dentro da minha variavel paciente ele procurar pela td info-peso pra trazer essa informação. 
+var pacientes = paciente.querySelectorAll(".paciente"); //criei uma variavel paciente que vai ter a função de dentro do meu document procurar a ID do primeiro paciente. Pra procurar ID usa #, classes é .
+var tdPeso = peso.querySelectorAll(".info-peso"); // criei a variavel tdPeso pra dentro da minha variavel paciente ele procurar pela td info-peso pra trazer essa informação. 
+//console.log(paciente.querySelector(".info-peso"));
 var peso = tdPeso.textContent; //criei a variavel peso pra que ela buscasse somente o valor em texto da variavel tdPeso
 
 for (var i = 0; i < pacientes.length; i++){ //length é a propriedade que ja tem a informação de quantos objetos tenho dentro de um array
@@ -16,7 +17,7 @@ for (var i = 0; i < pacientes.length; i++){ //length é a propriedade que ja tem
      console.log(tdAltura);
      console.log(altura);
      
-     var tdImc = paciente.querySelector(".info-imc");
+     var tdImc = document.querySelectorAll(".info-imc");
      
      var pesoEValido = true;
      var alturaEValida = true;
