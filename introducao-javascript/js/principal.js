@@ -23,12 +23,14 @@ for (var i = 0; i < pacientes.length; i++){ //length é a propriedade que ja tem
             console.log("Peso inválido!");
             pesoEhValido = false;
             tdImc.textContent = "Peso inválido";
+            paciente.classList.add("paciente-invalido"); //posso usar paciente.style.color ou .style.backgroundColor (quando queremos modificar um estilo com duas palavras, o hífen (-) não é aceito pela linguagem JavaScript. Teremos que utilizar o padrão Camel Case - no qual as palavras compostas ou frases são iniciadas com maiúsculas e unidas sem espaços), fontSize, enfim, altera o estilo do que eu quero porém, não é uma boa pratica alterar no codigo js, enão criamos uma classe no CSS chamada paciente-invalido e aplicamos.
         }
     
         if (altura <= 0 || altura >= 3.00) {
             console.log("Altura inválida!");
             alturaEhValida = false;
             tdImc.textContent = "Altura inválida";
+            paciente.classList.add("paciente-invalido"); //teremos a classList para acessarmos as classes. E usando o método add, adicionaremos a classe desejada, no caso, paciente-invalido.
         }
     
       if (alturaEhValida && pesoEhValido) {
