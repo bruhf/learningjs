@@ -43,6 +43,13 @@ console.log(paciente);//apresenta td (paciente)
 console.log(tdPeso);//tag peso
 console.log(peso);//100
 
+//titulo.addEventListener("click", mostraMensagem); //escuta as interações dos usuários,
 
+//function mostraMensagem (){ //posso usar uma função anonima, que é dentro do parametro, após o "click" dentro de titulo.addEventListener, declaro uma função sem nome porém com a mesma estrutura, substuindo o "mostramensagem" pela estrutura de função, então tudo depois da virgula é função.
+  //  console.log("Eu fui clicado!");
+//}
 
+var botaoAdicionar = document.querySelector ("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function (){
 
+});
